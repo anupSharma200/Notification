@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { View, TextInput, Button, StyleSheet, Text, Alert, Platform } from "react-native"; // Added Platform import
+import { View, TextInput, Button, StyleSheet, Text, Alert, Platform } from "react-native"; 
 import * as Notifications from "expo-notifications";
 import { useNavigation } from "@react-navigation/native";
 import Constants from "expo-constants";

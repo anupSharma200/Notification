@@ -15,7 +15,7 @@ const App = () => {
     const backgroundSubscription = Notifications.addNotificationResponseReceivedListener(
       (response) => {
         const message = response.notification.request.content.data.message;
-        // Get the navigator ref to navigate from outside React components
+       
         if (navigationRef.current) {
           navigationRef.current.navigate('Notification', { message });
         }
