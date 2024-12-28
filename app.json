@@ -1,28 +1,67 @@
 {
   "expo": {
     "name": "my-new-project",
-    "slug": "my-new-project",
     "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "projectId": "3e4531d4-44ed-4038-8304-c4d05a242dec",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dev_anup.mynewproject"
     },
     "android": {
+      "googleServiceFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "plugins": [
+        "@react-native-firebase/app",
+        "@react-native-firebase/messaging"
+      ],
+      "package": "com.dev_anup.mynewproject",
+      "permissions": [
+        "android.permission.WRITE_CONTACTS",
+        "android.permission.READ_PROFILE",
+        "android.permission.POST_NOTIFICATIONS"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "listUnknownPackages": false
+      }
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#ffffff",
+          "sounds": [
+            "./assets/notification-sound.wav"
+          ]
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f06e22de-b982-4564-8768-ea10a6e560fb"
+      }
     }
   }
 }
